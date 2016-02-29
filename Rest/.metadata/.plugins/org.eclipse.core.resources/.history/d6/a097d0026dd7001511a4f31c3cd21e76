@@ -1,0 +1,31 @@
+package org.kaushik.javabrains.service;
+
+import org.kaushik.javabrains.messanger.database.Database;
+import org.kaushik.javabrains.messanger.model.Message;
+
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class MessageService {
+	
+	private Map<Long,String> messages = Database.getMessages();
+	
+	public List<Message> getAllMessages(){
+		
+		/*List<Message> list = new ArrayList<Message>();
+		
+		Message message1 = new Message(1,"Hello World!","Rajesh",new Date());
+		Message message2 = new Message(2,"Hello Jersey!","Ojas",new Date());
+		
+		list.add(message1);
+		list.add(message2);
+		
+		return list ;
+		*/
+		
+		return new ArrayList(messages.values());
+	}
+
+}

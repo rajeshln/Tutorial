@@ -1,0 +1,31 @@
+package org.kaushik.javabrains.service;
+
+import org.kaushik.javabrains.messanger.model.Message;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MessageService {
+	
+	public List<Message> getMessage(){
+		
+		List<Message> messages = new ArrayList();
+		
+		Message message1 = new Message();
+		message1.setId(1);
+		message1.setAuthor("rajesh");
+		message1.setMessage("Hello World!");
+		
+		Message message2 = new Message();
+		message1.setId(2);
+		message1.setAuthor("Ojas");
+		message1.setMessage("Hello Jersey!");
+		
+		messages.add(message1);
+		messages.add(message2);
+		
+		return messages;
+		
+	}
+
+}

@@ -1,0 +1,33 @@
+package JSON;
+
+public class Car {
+	
+	
+	private String type;
+	private int make;
+	
+	/*public car(){}
+	
+	
+	public Car(String type, int make) {
+		
+		this.type = type;
+		this.make = make;
+	}
+	*/
+	public String getType() {
+		return type;
+	}
+	
+	public void setType(String type) {
+		this.type = type;
+	}
+	public int getMake() {
+		return make;
+	}
+	public void setMake(int make) {
+		this.make = make;
+	}
+	
+
+}

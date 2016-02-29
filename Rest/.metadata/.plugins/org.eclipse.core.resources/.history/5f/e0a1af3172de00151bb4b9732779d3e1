@@ -1,0 +1,37 @@
+package JSON;
+
+import java.io.IOException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class JSONMapperExample {
+
+	public static void main(String[] args) {
+		
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		String carJson = 
+			"{ \"brand\" : \"mercedes\" , \"make\" : \"2015\" }"; //  enter \ before "
+		
+		try {
+			
+			Car mycar = objectMapper.readValue(carJson, Car.class);
+			
+			System.out.println(" car make "+mycar.getMake());
+			System.out.println(" car type "+mycar.getType());
+			
+		}
+		
+		catch(IOException e){
+			
+			e.printStackTrace();
+			
+		}
+		
+		
+		}
+
+
+}
+

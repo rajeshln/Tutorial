@@ -1,0 +1,31 @@
+package org.kaushik.javabrains.messanger.database;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Database {
+
+private static Map <Long,String> messages = new HashMap<Long, String>();
+private static Map <Long,String> profiles = new HashMap<Long,String>();
+
+
+public static Map<Long, String> getMessages() {
+	return messages;
+}
+
+public static void setMessages(Map<Long, String> messages) {
+	Database.messages = messages;
+}
+
+public static Map<Long, String> getProfiles() {
+	return profiles;
+}
+
+public static void setProfiles(Map<Long, String> profiles) {
+	Database.profiles = profiles;
+}
+
+
+	
+	
+}

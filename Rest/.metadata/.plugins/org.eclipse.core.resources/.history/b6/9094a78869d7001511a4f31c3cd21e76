@@ -1,0 +1,14 @@
+package org.kaushik.javabrains.messanger.database;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Database {
+
+private static Map <Long,String> messages = new HashMap<Long, String>();
+private static Map <Long,String> profiles = new HashMap<Long,String>();
+
+
+	
+	
+}

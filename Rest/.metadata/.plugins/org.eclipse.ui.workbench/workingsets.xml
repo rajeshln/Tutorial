@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1456415512033_1" label="MYPOCs" name="MYPOCs">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SOAPWebService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/messanger" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1455929118237_0" label="Window Working Set" name="Aggregate for window 1455929118234"/>
+<mruList name="MYPOCs"/>
+</workingSetManager>

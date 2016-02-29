@@ -1,0 +1,39 @@
+package org.kaushik.javabrains.messanger.resources;
+
+import java.util.List;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.kaushik.javabrains.messanger.model.Message;
+import org.kaushik.javabrains.service.MessageService;
+
+@Path("/messages")
+public class MessagesResource {
+	
+MessageService service = new MessageService();
+
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public List<Message> getMessages(){
+	
+		System.out.println(" Returing messages ");
+		return service.getAllMessages();
+	}
+
+
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	@Path("{messageid}")
+	public Message getMessage(@PathParam("")){
+		Message message = null;
+		
+		
+		
+		return message ;
+	}
+
+
+}

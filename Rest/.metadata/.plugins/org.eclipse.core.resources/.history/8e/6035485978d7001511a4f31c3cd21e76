@@ -1,0 +1,50 @@
+package org.kaushik.javabrains.service;
+
+import org.kaushik.javabrains.messanger.database.Database;
+import org.kaushik.javabrains.messanger.model.Message;
+
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class MessageService {
+	
+	private Map<Long,Message> messages = Database.getMessages();
+	
+	public List<Message> getAllMessages(){
+		
+		return new ArrayList<Message>( messages.values());
+	}
+	
+	
+	public Message getMessage(long id){
+		return messages.get(id);
+	}
+	
+	
+	public Message addMessage(Message message){
+		
+		message.setId( (messages.size()+1));
+		messages.put(message.getId(), message);
+		
+		return message;
+		
+	}
+	
+	public Message removeMessage(Message message){
+		return messages.remove(message.getId());
+	}
+	
+	
+	public Message updateMessage(Message message){
+		messages.replace(message.getId(), message);
+		return message;
+	}
+	
+	
+	}
+	
+	
+}
+

@@ -1,0 +1,17 @@
+package JSON;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class JSONMapperExample {
+
+	public static void main(String[] args) {
+		
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		
+		String carJson = 
+			"{ \"brand"\: \"mercedes"\ , \"make"\ : \"2015"\ }";
+
+	}
+
+}

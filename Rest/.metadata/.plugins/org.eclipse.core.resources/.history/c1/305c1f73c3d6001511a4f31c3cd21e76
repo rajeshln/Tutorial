@@ -1,0 +1,9 @@
+package org.kaushik.javabrains.service;
+
+public class MessageService {
+	
+	public List<Message> getMessage(){
+		
+	}
+
+}
