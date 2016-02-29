@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-3.0.dtd">
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+<bean id="triangleBean" class="core.Triangle">
+	<property id="pointA" ref="pointa"/>
+	<property id="pointB" ref="pointb"/>
+	<property id="pointC" ref="pointc"/>
+</bean>
+
+<bean id="pointa">
+	<property name="x" value="0"/>
+	<property name="y" value="0"/>
+</bean>
+
+<bean id="pointb">
+	<property name="x" value="10"/>
+	<property name="y" value="10"/>
+</bean>
+
+<bean id="pointc">
+	<property name="x" value="20"/>
+	<property name="y" value="20"/>
+</bean>
+
+</beans>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="triangleBean" class="core.Triangle">
+	<property name="pointA" ref="pointa"/>
+	<property name="pointB" ref="pointb"/>
+	<property name="pointC" ref="pointc"/>
+</bean>
+
+<bean id="pointa" class="core.Point" >
+	<property name="x" value="01"/>
+	<property name="y" value="02"/>
+</bean>
+
+<bean id="pointb" class="core.Point">
+	<property name="x" value="10"/>
+	<property name="y" value="10"/>
+</bean>
+
+<bean id="pointc" class="core.Point">
+	<property name="x" value="20"/>
+	<property name="y" value="20"/>
+</bean>
+
+<!--  AUTOWIRING Starts -->
+<!--  Keeping name same as the name of property in Circle class Container will match with the bean name while autowiring. -->
+<bean id="center" class="core.Point">
+	<property name="x" value="120"/>
+	 <!-- <property name="y" value="#{10+4}"/> testing spring expression langage SpEL -->
+	<property name="y" value="#{T(java.lang.Math).random()}"/>
+</bean>
+
+
+<!-- Using Autowire do not need to provide properties-->
+<bean id="circleBean" class="core.Circle"  >
+</bean>
+
+<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+ <!--  AUTOWIRING Starts -->
+ 
+<!--  where-ever @Required annotation is used for setter those fields are compulsory  -->
+<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+
+
+</beans>

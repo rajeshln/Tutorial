@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="triangleCollBean" class="core.TriangleCollection">
+
+	<property name="points">
+		<list>
+		<ref bean="pointa"/>
+		<ref bean="pointb"/>
+		<ref bean="pointc"/>
+		</list>
+	
+	</property>
+	
+</bean>
+
+<bean id="pointa" class="core.Point" >
+	<property name="x" value="3"/>
+	<property name="y" value="3"/>
+</bean>
+
+<bean id="pointb" class="core.Point">
+	<property name="x" value="4"/>
+	<property name="y" value="5"/>
+</bean>
+
+<bean id="pointc" class="core.Point">
+	<property name="x" value="5"/>
+	<property name="y" value="6"/>
+</bean>
+
+</beans>
